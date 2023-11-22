@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fitur Keranjang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="bg-gray-700 p-3 w-full flex justify-between text-white">
+      <div>
+        <a href="#" class="ms-5">Home</a>
+      </div>
+      <div>
+        <input type="text" placeholder="cari barang anda" class="searchbar px-4 py-1 text-sky-500 w-96 rounded-lg"/>
+      </div>
+      <div>
+        <a href="#" class="tampil-keranjang"><span class="cart_count">0</span>Keranjang</a>
+        
+      </div>
+    </nav>
+
+    <!--isi konten-->
+    <div class="grid grid-cols-3 gap-10 m-5 div-produk"></div>
+    
+    <!-- modal -->
+    <div class="absolute inset-0 flex justify-center items-center modal hidden">
+      <div class="bg-gray-500 p-5 w-full m-32 rounded text white">
+
+        <div class="flex justify-between items-center">
+          <div class="font-bold text-xl">KERANJANG ANDA</div>
+          <div class="font-bold text-xl hover:cursor-pointer btn-tutup">TUTUP</div>
+        </div>
+        <div class="mt-5 flex justify-around items-center" style="color: aliceblue; font-weight:bold;">
+            <span>Nama Produk</span>
+            <span>Kategori</span>
+            <span>Keranjang</span>
+        </div>
+
+        <div class="keranjang-anda grid grid-cols-1 text-black gap-1" id="remove">
+
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
